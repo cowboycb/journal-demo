@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql:8
+    container_name: mysql-8
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=journal
+    volumes:
+      - ./mysql:/var/lib/mysql

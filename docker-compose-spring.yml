@@ -1,0 +1,15 @@
+version: '3'
+services:
+  spring-boot:
+    build:
+      context: ./
+      dockerfile: ./Docker/spring/Dockerfile
+    container_name: journal-app
+    networks:
+      - journal
+    ports:
+      - "5050:5050"
+    restart: always
+
+networks:
+  journal:
